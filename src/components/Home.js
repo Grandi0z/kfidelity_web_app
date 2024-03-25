@@ -8,8 +8,7 @@ import "../assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.cs
 import "../assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css";
 
 // ! import componets
-import SidebarSearch from './Home/SidebarSearch';
-import UserProfilePanel from './Home/UserProfilePanel';
+import Sidebar from './Sidebar';
 // ! import js. no necessary to use jquery
 //import '../assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js';
 // import '../assets/dist/js/admin-lte/dist/js/adminlte';
@@ -92,22 +91,7 @@ const Home = () => {
             {/* /.navbar */}
     
             {/* Main Sidebar Container */}
-            <aside className="main-sidebar sidebar-light-primary elevation-4">
-              {/* Brand Logo */}
-              <a href="index3.html" className="brand-link">
-                <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" className="brand-image img-circle elevation-3" style={{ opacity: '.8' }} />
-                <span className="brand-text font-weight-light">K-FIDELITY</span>
-              </a>
-    
-              {/* Sidebar */}
-              <div className="sidebar">
-                {/* Sidebar content */}
-                <UserProfilePanel />
-                <SidebarSearch />
-                {/* Add sidebar content */}
-              </div>
-              {/* /.sidebar */}
-            </aside>
+            <Sidebar />
     
             {/* Content Wrapper. Contains page content */}
             <div className="content-wrapper">
