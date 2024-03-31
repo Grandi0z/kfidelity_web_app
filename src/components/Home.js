@@ -9,6 +9,9 @@ import "../assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css";
 
 // ! import componets
 import Sidebar from './Sidebar';
+import CardBalance from './Home/CardBalance';
+import CardLatestPaymentQRCode from './Home/CardLatestPaymentQRCode';
+import CardTransactionStats from './Home/CardTransactionStats';
 // ! import js. no necessary to use jquery
 //import '../assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js';
 // import '../assets/dist/js/admin-lte/dist/js/adminlte';
@@ -117,6 +120,9 @@ const Home = () => {
               <section className="content">
                 <div className="container-fluid">
                   {/* Place your content here */}
+                  <CardBalance />
+                  <CardLatestPaymentQRCode />
+                  <CardTransactionStats />
                 </div>
               </section>
               {/* /.content */}

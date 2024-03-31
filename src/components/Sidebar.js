@@ -2,6 +2,7 @@ import React from "react";
 import SidebarSearch from './Sidebar/SidebarSearch';
 import UserProfilePanel from './Sidebar/UserProfilePanel';
 import SidebarMenu from "./Sidebar/SidebarMenu";
+import SidebarConfiguration from "./Sidebar/SidebarConfiguration";
 const Sidebar = () => {
   return (
     <aside className="main-sidebar sidebar-light-primary elevation-4">
@@ -22,6 +23,7 @@ const Sidebar = () => {
         <UserProfilePanel />
         <SidebarSearch />
         <SidebarMenu />
+        <SidebarConfiguration />
         {/* Add sidebar content */}
       </div>
       {/* /.sidebar */}
