@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 // !import styles
 import "../assets/plugins/fontawesome-free/css/all.min.css";
 import "../assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css";
@@ -9,15 +9,14 @@ import "../assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css";
 
 // ! import componets
 
-import SidebarSearch from './Home/SidebarSearch';
-import UserProfilePanel from './Home/UserProfilePanel';
-import Footer from './Footer';
-import NavBar from './NavBar';
 
-import Sidebar from './Sidebar';
-import CardBalance from './Home/CardBalance';
-import CardLatestPaymentQRCode from './Home/CardLatestPaymentQRCode';
-import CardTransactionStats from './Home/CardTransactionStats';
+import Footer from "./Footer";
+import NavBar from "./NavBar";
+
+import Sidebar from "./Sidebar";
+import CardBalance from "./Home/CardBalance";
+import CardLatestPaymentQRCode from "./Home/CardLatestPaymentQRCode";
+import CardTransactionStats from "./Home/CardTransactionStats";
 
 // ! import js. no necessary to use jquery
 //import '../assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js';
@@ -59,47 +58,31 @@ const Home = () => {
   // }, []);
 
   return (
-
     <div className="wrapper hold-transition light-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
-
       {/* Navbar */}
       <NavBar />
       {/* /.navbar */}
       <Sidebar />
-    
-            {/* Main Sidebar Container */}
-            
-            {/* Content Wrapper. Contains page content */}
-            <div className="content-wrapper">
-              {/* Content Header (Page header) */}
-              <div className="content-header">
-                <div className="container-fluid">
-                  <div className="row mb-2">
-                    <div className="col-sm-6">
-                      <h1 className="m-0">Acceuil </h1>
-                    </div>
-                    <div className="col-sm-6">
-                      <ol className="breadcrumb float-sm-right">
-                        <li className="breadcrumb-item"><a href="#">Home</a></li>
-                        <li className="breadcrumb-item active">Dashboard</li>
-                      </ol>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* /.content-header */}
-    
-              {/* Main content */}
-              <section className="content">
-                <div className="container-fluid">
-                  {/* Place your content here */}
-                  <CardBalance />
-                  <CardLatestPaymentQRCode />
-                  <CardTransactionStats />
-                </div>
-              </section>
-              {/* /.content */}
 
+      {/* Main Sidebar Container */}
+
+      {/* Content Wrapper. Contains page content */}
+      <div className="content-wrapper">
+        {/* Content Header (Page header) */}
+        <div className="content-header">
+          <div className="container-fluid">
+            <div className="row mb-2">
+              <div className="col-sm-6">
+                <h1 className="m-0">Acceuil </h1>
+              </div>
+              <div className="col-sm-6">
+                <ol className="breadcrumb float-sm-right">
+                  <li className="breadcrumb-item">
+                    <a href="#">Home</a>
+                  </li>
+                  <li className="breadcrumb-item active">Dashboard</li>
+                </ol>
+              </div>
             </div>
           </div>
         </div>
@@ -109,7 +92,17 @@ const Home = () => {
         <section className="content">
           <div className="container-fluid">
             {/* Place your content here */}
+            <CardBalance />
+            <CardLatestPaymentQRCode />
+            <CardTransactionStats />
           </div>
+        </section>
+        {/* /.content */}
+        {/* /.content-header */}
+
+        {/* Main content */}
+        <section className="content">
+          <div className="container-fluid">{/* Place your content here */}</div>
         </section>
         {/* /.content */}
       </div>
@@ -127,4 +120,4 @@ const Home = () => {
   );
 };
 
-export default Home
+export default Home;
