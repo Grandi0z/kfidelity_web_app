@@ -8,10 +8,17 @@ import "../assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.cs
 import "../assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css";
 
 // ! import componets
+
+import SidebarSearch from './Home/SidebarSearch';
+import UserProfilePanel from './Home/UserProfilePanel';
+import Footer from './Footer';
+import NavBar from './NavBar';
+
 import Sidebar from './Sidebar';
 import CardBalance from './Home/CardBalance';
 import CardLatestPaymentQRCode from './Home/CardLatestPaymentQRCode';
 import CardTransactionStats from './Home/CardTransactionStats';
+
 // ! import js. no necessary to use jquery
 //import '../assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js';
 // import '../assets/dist/js/admin-lte/dist/js/adminlte';
@@ -52,50 +59,16 @@ const Home = () => {
   // }, []);
 
   return (
-          <div className="wrapper hold-transition light-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
-    
-            {/* Navbar */}
-            <nav className="main-header navbar navbar-expand navbar-light">
-              {/* Left navbar links */}
-              <ul className="navbar-nav">
-                <li className="nav-item">
-                  <a className="nav-link" data-widget="pushmenu" href="#" role="button"><i className="fas fa-bars"></i></a>
-                </li>
-                <li className="nav-item d-none d-sm-inline-block">
-                  <a href="index3.html" className="nav-link">Acceuil</a>
-                </li>
-              </ul>
-    
-              {/* Right navbar links */}
-              <ul className="navbar-nav ml-auto">
-                {/* Navbar Search */}
-                <li className="nav-item">
-                  <a className="nav-link" data-widget="navbar-search" href="#" role="button">
-                    <i className="fas fa-search"></i>
-                  </a>
-                  <div className="navbar-search-block">
-                    <form className="form-inline">
-                      <div className="input-group input-group-sm">
-                        <input className="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search" />
-                        <div className="input-group-append">
-                          <button className="btn btn-navbar" type="submit">
-                            <i className="fas fa-search"></i>
-                          </button>
-                          <button className="btn btn-navbar" type="button" data-widget="navbar-search">
-                            <i className="fas fa-times"></i>
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </li>
-              </ul>
-            </nav>
-            {/* /.navbar */}
+
+    <div className="wrapper hold-transition light-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+
+      {/* Navbar */}
+      <NavBar />
+      {/* /.navbar */}
+      <Sidebar />
     
             {/* Main Sidebar Container */}
-            <Sidebar />
-    
+            
             {/* Content Wrapper. Contains page content */}
             <div className="content-wrapper">
               {/* Content Header (Page header) */}
@@ -126,25 +99,32 @@ const Home = () => {
                 </div>
               </section>
               {/* /.content */}
+
             </div>
-            {/* /.content-wrapper */}
-    
-            {/* Control Sidebar */}
-            <aside className="control-sidebar control-sidebar-dark">
-              {/* Control sidebar content */}
-            </aside>
-            {/* /.control-sidebar */}
-    
-            {/* Main Footer */}
-            <footer className="main-footer">
-              <strong>Designed by &copy; 2024 <a href="https://afri-soft.com">Afri-Soft</a>.</strong>
-              All rights reserved.
-              <div className="float-right d-none d-sm-inline-block">
-                <b>Version</b> 1.0
-              </div>
-            </footer>
           </div>
-      );
-    };
+        </div>
+        {/* /.content-header */}
+
+        {/* Main content */}
+        <section className="content">
+          <div className="container-fluid">
+            {/* Place your content here */}
+          </div>
+        </section>
+        {/* /.content */}
+      </div>
+      {/* /.content-wrapper */}
+
+      {/* Control Sidebar */}
+      <aside className="control-sidebar control-sidebar-dark">
+        {/* Control sidebar content */}
+      </aside>
+      {/* /.control-sidebar */}
+
+      {/* Main Footer */}
+      <Footer />
+    </div>
+  );
+};
 
 export default Home
