@@ -1,11 +1,5 @@
 import React, { useEffect } from "react";
-// !import styles
-import "../assets/plugins/fontawesome-free/css/all.min.css";
-import "../assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css";
-import "../assets/dist/css/adminlte.min.css";
-import "../assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css";
-import "../assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css";
-import "../assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css";
+
 
 // ! import componets
 
@@ -17,6 +11,7 @@ import Sidebar from "./Sidebar";
 import CardBalance from "./Home/CardBalance";
 import CardLatestPaymentQRCode from "./Home/CardLatestPaymentQRCode";
 import CardTransactionStats from "./Home/CardTransactionStats";
+import PageTitle from "./PageTittle";
 
 // ! import js. no necessary to use jquery
 //import '../assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js';
@@ -30,91 +25,26 @@ import CardTransactionStats from "./Home/CardTransactionStats";
 //import QrCode from '../assets/plugins/qrcode/qrcode';
 
 const Home = () => {
-  // useEffect(() => {
-  //   // Initialize required scripts
-  //   const pushMenuHandler = () => {
-  //     document.body.classList.toggle('sidebar-collapse');
-  //   };
-  //   document.querySelector('[data-widget="pushmenu"]').addEventListener('click', pushMenuHandler);
-
-  //   // QR Code generation
-  //   QrCode.toCanvas(document.getElementById('qrcode'), 'Your QR Code Data Here', function (error) {
-  //     if (error) console.error(error);
-  //     console.log('QR Code generated');
-  //   });
-
-  //   // DataTable initialization
-  //   const tablePartenaire = document.getElementById('tablePartenaire');
-  //   const tableTransaction = document.getElementById('tableTransaction');
-  //   if (tablePartenaire && tableTransaction) {
-  //     window.$(tablePartenaire).DataTable();
-  //     window.$(tableTransaction).DataTable();
-  //   }
-
-  //   // Cleanup
-  //   return () => {
-  //     document.querySelector('[data-widget="pushmenu"]').removeEventListener('click', pushMenuHandler);
-  //   };
-  // }, []);
-
+  const pageTitle = "Acceuil";
   return (
     <div className="wrapper hold-transition light-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
-      {/* Navbar */}
       <NavBar />
-      {/* /.navbar */}
       <Sidebar />
-
-      {/* Main Sidebar Container */}
-
-      {/* Content Wrapper. Contains page content */}
       <div className="content-wrapper">
-        {/* Content Header (Page header) */}
-        <div className="content-header">
-          <div className="container-fluid">
-            <div className="row mb-2">
-              <div className="col-sm-6">
-                <h1 className="m-0">Acceuil </h1>
-              </div>
-              <div className="col-sm-6">
-                <ol className="breadcrumb float-sm-right">
-                  <li className="breadcrumb-item">
-                    <a href="#">Home</a>
-                  </li>
-                  <li className="breadcrumb-item active">Dashboard</li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* /.content-header */}
-
-        {/* Main content */}
+        <PageTitle title={pageTitle} />
         <section className="content">
           <div className="container-fluid">
-            {/* Place your content here */}
             <CardBalance />
             <CardLatestPaymentQRCode />
             <CardTransactionStats />
           </div>
         </section>
-        {/* /.content */}
-        {/* /.content-header */}
-
-        {/* Main content */}
         <section className="content">
           <div className="container-fluid">{/* Place your content here */}</div>
         </section>
-        {/* /.content */}
       </div>
-      {/* /.content-wrapper */}
-
-      {/* Control Sidebar */}
       <aside className="control-sidebar control-sidebar-dark">
-        {/* Control sidebar content */}
       </aside>
-      {/* /.control-sidebar */}
-
-      {/* Main Footer */}
       <Footer />
     </div>
   );
